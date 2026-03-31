@@ -1,0 +1,7 @@
+# Python dependencies for DVB-S2 Transmitter GUI
+PyQt6>=6.4.0
+PyQt6-Qt6>=6.4.0
+PyQt6-sip>=13.4.0
+numpy>=1.21.0
+paho-mqtt>=2.0.0
+paramiko>=3.4.0
