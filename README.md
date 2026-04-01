@@ -36,7 +36,7 @@ It accepts MPEG-TS on stdin, performs BBFRAME generation, BCH/LDPC encoding, PL 
 
 ```bash
 chmod +x install.sh
-./install.sh
+sudo ./install.sh
 ```
 
 ### Manual build
