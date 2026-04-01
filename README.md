@@ -100,5 +100,5 @@ Leave it off unless you need extra hardening for very low symbol-rate work.
 - Rebuild `dvbs2_tx` on the target machine before on-air use.
 - Validate RF cleanliness on a receiver or spectrum monitor before transmitting on-air.
 - Keep Pluto on a trusted network or tunnel control traffic securely if you operate it remotely.
-
+- Make sure your Firmware is updated to the latest.
 ## 73 OD5RAL(Radio Amateur Lebanon) Eng.Team
