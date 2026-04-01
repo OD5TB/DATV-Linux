@@ -1,21 +1,4 @@
-DATV-Linux
-Copyright (C) 2026 OD5RAL Engineering Team
-
-This file applies to the DATV-Linux project.
-
-DATV-Linux is free software: you can redistribute it and/or modify
-it under the terms of version 3 of the GNU General Public
-License as published by the Free Software Foundation.
-
-DATV-Linux is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-                     GNU GENERAL PUBLIC LICENSE
+                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -155,10 +138,10 @@ control those activities.  However, it does not include the work's
 System Libraries, or general-purpose tools or generally available free
 programs which are used unmodified in performing those activities but
 which are not part of the work.  For example, Corresponding Source
-includes interface definition files associated with source files for the
-work, and the source code for shared libraries and dynamically linked
-subprograms that the work is specifically designed to require, such as
-by intimate data communication or control flow between those
+includes interface definition files associated with source files for
+the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require,
+such as by intimate data communication or control flow between those
 subprograms and other parts of the work.
 
   The Corresponding Source need not include anything that users
