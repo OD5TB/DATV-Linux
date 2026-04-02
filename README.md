@@ -184,4 +184,5 @@ ffmpeg -re -i video.ts -f mpegts - | ./dvbs2_tx QPSK_1/2_S 2407500000 250000 10 
 - Always validate RF cleanliness and receiver lock before transmitting on-air.
 - Keep symbol rate, codec settings, and TS bitrate within the safe transport budget.
 - Keep Gold Code : 0 (default) as this will be used for future developed DVBS2-receivers.
-**73 from OD5RAL Eng.Team**
+  
+##73 from OD5RAL(Radio Amateur Lebanon) Eng.Team**
