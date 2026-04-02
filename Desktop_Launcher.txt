@@ -1,0 +1,22 @@
+
+
+
+$:nano ~/Desktop/DATV‑Linux.desktop 
+#copy the following in and make sure you have the correct paths
+
+!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=DATV-Linux
+Comment=Launch the DATV-Linux GUI
+Exec=python3 /home/od5tb/Downloads/DATV-Linux-v1.0.48/dvbs2_gui.py
+Path=/home/od5tb/Downloads/DATV-Linux-v1.0.48
+Icon=/home/od5tb/Downloads/DATV-Linux-v1.0.48/icon.png
+Categories=Development;AudioVideo;HamRadio;
+
+$:chmod +x ~/Desktop/DATV‑Linux.desktop
+$:mkdir -p ~/.local/share/applications
+mv ~/Desktop/DATV-Linux.desktop ~/.local/share/applications/
+$:sudo update-desktop-database
