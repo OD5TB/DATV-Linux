@@ -154,7 +154,7 @@ If you are using **PlutoDVB2 F5OEO** or **Pluto F5UII 0303/2402**, DATV-Linux ca
 
 ## Important note about firmware
 
-**If you are using PlutoDVB2 F5OEO or Pluto F5UII firmware paths, make sure your Pluto+ / ADALM Pluto firmware is updated to the latest version.** Older firmware versions can cause avoidable problems, especially at higher symbol rates.
+**If you are using PlutoDVB2 F5OEO or Pluto F5UII firmware paths, make sure your Pluto+ / ADALM Pluto firmware is updated to the latest version(https://github.com/F5OEO/plutosdr-fw).** Older firmware versions can cause avoidable problems, especially at higher symbol rates.
 
 **If you are using stock ADALM Pluto / Pluto+ firmware, DATV-Linux can still work normally and no custom firmware is required.**
 
