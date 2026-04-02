@@ -1,0 +1,137 @@
+Run DATV-Linux on Windows (WSL2 + USB Support)
+
+1. Install WSL (Windows Subsystem for Linux)
+
+Open PowerShell as Administrator:
+
+wsl --install
+
+Reboot your PC if prompted.
+
+2. Update WSL
+
+wsl --update
+wsl --shutdown
+
+Check version:
+
+wsl --list --verbose
+
+Make sure Ubuntu is Version 2
+
+If not:
+
+wsl --set-version Ubuntu 2
+
+3. Open Ubuntu
+
+Launch Ubuntu from Start menu and create your username/password.
+
+4. Copy DATV-Linux into WSL
+
+Inside Ubuntu:
+
+cd ~
+cp /mnt/c/Users/<YourWindowsUser>/Downloads/DATV-Linux-v1.0.48.zip ~/
+
+Then:
+
+sudo apt update
+sudo apt install -y unzip
+unzip DATV-Linux-v1.0.48.zip
+cd DATV-Linux-v1.0.48
+
+5. Install dependencies
+
+chmod +x install.sh
+./install.sh
+
+Verify:
+
+python3 check_dependencies.py
+
+6. Fix GUI (WSL graphics issue)
+
+WSL uses software rendering (llvmpipe), so force Qt to use software OpenGL:
+
+export QT_OPENGL=software
+export LIBGL_ALWAYS_SOFTWARE=1
+
+Optional permanent fix:
+
+nano ~/.bashrc
+
+Add:
+
+export QT_OPENGL=software
+export LIBGL_ALWAYS_SOFTWARE=1
+
+Then:
+
+source ~/.bashrc
+
+7. Install USB support (Windows side)
+
+Open PowerShell as Administrator:
+
+winget install --id dorssel.usbipd-win
+
+Close PowerShell and reopen it.
+
+Verify:
+
+usbipd list
+
+8. Attach SDR device to WSL
+
+List devices:
+
+usbipd list
+
+Example:
+
+1-1    1d50:6089  HackRF One
+
+Bind (share device):
+
+usbipd bind --busid 1-1 --force
+
+Attach to WSL:
+
+usbipd attach --wsl --busid 1-1
+
+9. Verify device in Ubuntu
+
+lsusb
+
+For HackRF:
+
+hackrf_info
+
+For LimeSDR:
+
+SoapySDRUtil --find
+
+10. Run DATV-Linux GUI
+
+cd ~/DATV-Linux-v1.0.48
+QT_OPENGL=software LIBGL_ALWAYS_SOFTWARE=1 python3 dvbs2_gui.py
+
+11. Important Notes
+
+Each time you replug SDR or restart Windows, run again:
+
+usbipd attach --wsl --busid 1-1
+
+For PlutoSDR, USB is not required. Use network mode:
+
+iio_info -u ip:192.168.2.1
+
+WSL is suitable for:
+- GUI testing
+- FFmpeg setup
+- Development
+
+For real-time transmission, native Linux is recommended.
+
+73 from OD5RAL Eng.Team
